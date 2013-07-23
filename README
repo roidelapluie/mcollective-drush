@@ -1,0 +1,129 @@
+drush mcollective agent
+=======================
+
+Drush agent for mcollective
+
+      Author: Julien Pivotto
+     Version: 1.0
+     License: GPLv2
+     Timeout: 600
+   Home Page: https://github.com/roidelapluie/mcollective-drush
+
+ACTIONS:
+========
+   cache-clear, updatedb
+
+   cache-clear action:
+   -------------------
+       Run drush cache-clear over a drupal installation
+
+       INPUT:
+           no:
+              Description: Assume 'no' as answer to all prompts.
+                   Prompt: Assume No
+                     Type: boolean
+                 Optional: true
+
+           root:
+              Description: Drupal root directory to use.
+                   Prompt: Root directory
+                     Type: string
+                 Optional: false
+               Validation: ^/[a-zA-Z\-_\d/]+$
+                   Length: 255
+
+           simulate:
+              Description: Simulate all relevant actions (don't actually change the system).
+                   Prompt: Simulate
+                     Type: boolean
+                 Optional: true
+
+           type:
+              Description: The particular cache to clear.
+                   Prompt: type
+                     Type: string
+                 Optional: false
+               Validation: ^[a-zA-Z\-_\d]+$
+                   Length: 32
+
+           uri:
+              Description: URI of the drupal site to use (only needed in multisite environments or when running on an alternate port).
+                   Prompt: URI
+                     Type: string
+                 Optional: true
+               Validation: ^[:a-zA-Z\-_\d/]+$
+                   Length: 255
+
+           yes:
+              Description: Assume 'yes' as answer to all prompts.
+                   Prompt: Assume Yes
+                     Type: boolean
+                 Optional: true
+
+
+       OUTPUT:
+           exitcode:
+              Description: Exitcode of drush.
+               Display As: Message
+
+           stderr:
+              Description: Error output of drush.
+               Display As: Message
+
+           stdout:
+              Description: Output of drush.
+               Display As: Message
+
+   updatedb action:
+   ----------------
+       Run drush updatedb over a drupal installation
+
+       INPUT:
+           no:
+              Description: Assume 'no' as answer to all prompts.
+                   Prompt: Assume No
+                     Type: boolean
+                 Optional: true
+
+           root:
+              Description: Drupal root directory to use.
+                   Prompt: Root directory
+                     Type: string
+                 Optional: false
+               Validation: ^/[a-zA-Z\-_\d/]+$
+                   Length: 255
+
+           simulate:
+              Description: Simulate all relevant actions (don't actually change the system).
+                   Prompt: Simulate
+                     Type: boolean
+                 Optional: true
+
+           uri:
+              Description: URI of the drupal site to use (only needed in multisite environments or when running on an alternate port).
+                   Prompt: URI
+                     Type: string
+                 Optional: true
+               Validation: ^[:a-zA-Z\-_\d/]+$
+                   Length: 255
+
+           yes:
+              Description: Assume 'yes' as answer to all prompts.
+                   Prompt: Assume Yes
+                     Type: boolean
+                 Optional: true
+
+
+       OUTPUT:
+           exitcode:
+              Description: Exitcode of drush.
+               Display As: Message
+
+           stderr:
+              Description: Error output of drush.
+               Display As: Message
+
+           stdout:
+              Description: Output of drush.
+               Display As: Message
+
