@@ -12,7 +12,7 @@ metadata :name        => "drush",
               :prompt      => "Root directory",
               :description => "Drupal root directory to use.",
               :type        => :string,
-              :validation  => '^/[a-zA-Z\-_\d/]+$',
+              :validation  => '^/[a-zA-Z\-_\d/.]+$',
               :optional    => false,
               :maxlength   => 255
 
@@ -20,7 +20,7 @@ metadata :name        => "drush",
               :prompt      => "URI",
               :description => "URI of the drupal site to use (only needed in multisite environments or when running on an alternate port).",
               :type        => :string,
-              :validation  => '^[:a-zA-Z\-_\d/]+$',
+              :validation  => '^[:a-zA-Z\-_\d/.]+$',
               :optional    => true,
               :maxlength   => 255
 
