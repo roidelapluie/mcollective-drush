@@ -2,7 +2,7 @@ module MCollective
   module Agent
     class Drush<RPC::Agent
       action "cache-clear" do
-        reply[:command] = Drush.get_drush_command("cache clear #{request[type]}", request)
+        reply[:command] = Drush.get_drush_command("cache-clear #{request[:type]}", request)
         reply[:exitcode] = run(reply[:command], :stdout => :stdout, :stderr => :stderr)
         if reply[:exitcode] == 0 then
           reply.statusmsg = "OK"
