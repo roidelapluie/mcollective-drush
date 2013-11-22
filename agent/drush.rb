@@ -25,7 +25,7 @@ module MCollective
           command += " --yes"
         end
         if request[:no] then
-          command += " --yes"
+          command += " --no"
         end
         if request[:uri] then
           command += " --uri=#{request[:uri]}" 
