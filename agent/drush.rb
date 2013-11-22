@@ -20,7 +20,7 @@ module MCollective
         end
       end
       def self.get_drush_command(drush_command, request)
-        command = "/usr/bin/drush"
+        command = request[:drush_path]
         if request[:yes] then
           command += " --yes"
         end

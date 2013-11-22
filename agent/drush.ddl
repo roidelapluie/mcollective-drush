@@ -16,6 +16,14 @@ metadata :name        => "drush",
               :optional    => false,
               :maxlength   => 255
 
+        input :drush_path,
+              :prompt      => "Path to drush",
+              :description => "Path to the drush executable.",
+              :type        => :string,
+              :default     => "/usr/bin/drush",
+              :optional    => true,
+              :maxlength   => 255
+
         input :uri,
               :prompt      => "URI",
               :description => "URI of the drupal site to use (only needed in multisite environments or when running on an alternate port).",
